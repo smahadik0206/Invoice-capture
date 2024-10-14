@@ -1,0 +1,28 @@
+# Mindee API client for document processing
+mindee==5.0.0
+
+# PDF to image converter (you might be using something like pdf2image or a custom package)
+pdf2image==1.16.3
+
+# Flask for web framework
+Flask==2.3.2
+
+# Werkzeug for handling secure file uploads
+Werkzeug==2.3.6
+
+# SQLite database management
+sqlite3==3.38.0
+
+# Pandas for data manipulation and exporting to CSV/Excel
+pandas==2.0.3
+
+# PyMuPDF (Fitz) for PDF processing
+PyMuPDF==1.21.1
+
+# Additional libraries
+re  # Regular expressions for parsing
+os  # Standard library for interacting with the operating system
+
+# Optional libraries if they are custom or need specific versions
+uuid  # Standard library for generating unique IDs
+datetime  # Standard library for handling date and time

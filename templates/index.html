@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static\style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Invoice Capture</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('getresults') }}">Get Results</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('feedback') }}">Feedback</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+
+    <div class="forbackground">
+      <div class="container">
+        <div class="heading">
+          <label for="file_input" class="btn-label attractive-label">Scan Your Invoice Now... <i class="fas fa-arrow-down"></i></label>
+        </div><br /><br /><br />
+        <div class="upload-btn-wrapper">
+          <form method="post" action="./upload" enctype="multipart/form-data">
+            <input type="file" class="btn" name="files" id="file_input" required />
+            <button class="btn" type="submit">Upload</button>
+            {% if notification %}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading">Well done!</h4>
+                <p>{{ notification }}</p>
+              </div>
+            {% endif %}
+          </form>
+        </div>
+
+        <div>
+          <form method="post" action="./saveToDataBase">
+            <button id="saveToDatabase" class="btn" onclick="simulateDatabaseSave()">Save to Database</button>
+            <p>{{ savedToDB_notification }}</p>
+          </form>
+        </div>
+
+        <!-- <p id="loadingMessage" class="loading-message"></p> -->
+
+        <div class="Downloadbtn">
+          <a href="{{ url_for('static', filename = 'Result/' ~ file_name) }}" download="{{ file_name }}" class="download-btn">Download <i class="fas fa-download"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2023 invoicecapture2023</p>
+      </div>
+    </footer>
+
+    <script>
+      // Simulating progress for demonstration
+      function simulateDatabaseSave() {
+        const loadingMessage = document.getElementById('loadingMessage')
+        let progress = 0
+        let interval = 500 // Adjust the interval for desired animation speed
+      
+        const incrementProgress = () => {
+          if (progress < 100) {
+            progress += 10 // Increment by 10% each time
+            loadingMessage.innerText = `Saving to Database: ${progress}%`
+          } else {
+            clearInterval(progressInterval)
+            loadingMessage.innerText = 'Data saved to database!'
+            loadingMessage.classList.add('success') // Apply a success style
+          }
+        }
+      
+        const progressInterval = setInterval(incrementProgress, interval)
+      }
+    </script>
+  </body>
+</html>
