@@ -1,0 +1,64 @@
+{
+    "document_details": {
+        "customer_name": "JAMES ROSS",
+        "customer_address": "22287 Watkins Groves Suite 839 North Angelafort, Virginia. 78233",
+        "supplier_name": "006 MCFARLAND SQUARES",
+        "supplier_address": "006 Mcfarland Squares Port Crystal, MN 41851",
+        "customer_registration_value": null,
+        "due_date": null,
+        "language": "en",
+        "currency": "USD",
+        "reference_number0": "4621149579",
+        "company_registration_value": null,
+        "total_amount": null,
+        "total_net": null,
+        "total_tax": null
+    },
+    "line_items": [
+        {
+            "description": "Frame",
+            "product_code": "579",
+            "quantity": "7.0",
+            "tax_amount": null,
+            "tax_rate": null,
+            "total_amount": "189.63",
+            "unit_price": "27.09"
+        },
+        {
+            "description": "Chain or Belt Drive",
+            "product_code": "878",
+            "quantity": "2.0",
+            "tax_amount": null,
+            "tax_rate": null,
+            "total_amount": "49.96",
+            "unit_price": "24.98"
+        },
+        {
+            "description": "Gearshift Lever",
+            "product_code": "958",
+            "quantity": "6.0",
+            "tax_amount": null,
+            "tax_rate": null,
+            "total_amount": "34.44",
+            "unit_price": "5.74"
+        },
+        {
+            "description": "Seat",
+            "product_code": "690",
+            "quantity": "2.0",
+            "tax_amount": null,
+            "tax_rate": null,
+            "total_amount": "57.8",
+            "unit_price": "28.9"
+        },
+        {
+            "description": "Muffler",
+            "product_code": "862",
+            "quantity": "8.0",
+            "tax_amount": null,
+            "tax_rate": null,
+            "total_amount": "349.44",
+            "unit_price": "43.68"
+        }
+    ]
+}
