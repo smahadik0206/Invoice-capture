@@ -6,7 +6,7 @@ Features
 Extract invoice data (such as invoice number, date, total amount, line items, etc.)
 Supports multiple file formats (PDF, image files)
 Data validation and error handling
-Export captured data to CSV or Excel formats
+Export captured data to CSV or JSON formats
 User-friendly interface for uploading and managing invoices
 
 Technologies Used
