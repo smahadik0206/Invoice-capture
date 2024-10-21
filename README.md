@@ -1,6 +1,7 @@
-# Invoice-capture
+![image](https://github.com/user-attachments/assets/f135044d-8122-4654-8196-32930b6adf13)# Invoice-capture
 Overview
 The Invoice Capture project is designed to automate the process of extracting and processing key data from invoices. It uses various data extraction techniques (like OCR or PDF parsing) and organizes the captured information into structured formats for further use or analysis. This project simplifies the tedious task of manually handling invoices, making it faster and more efficient.
+
 
 Features
 Extract invoice data (such as invoice number, date, total amount, line items, etc.)
